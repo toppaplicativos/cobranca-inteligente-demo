@@ -1,0 +1,17 @@
+---
+pid: 4088
+cwd: "C:\Users\Public\Projetos\cobrança-inteligente"
+command: "cd \"C:\\Users\\Public\\Projetos\\cobrança-inteligente\"; npm run lint"
+started_at: 2026-07-06T17:12:14.414Z
+running_for_ms: 86400010 
+---
+
+> react-example@0.0.0 lint
+> tsc --noEmit
+
+
+---
+exit_code: -1
+elapsed_ms: 86400010
+ended_at: 2026-07-07T17:12:26.223Z
+---

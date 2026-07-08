@@ -1,0 +1,6 @@
+{
+  "name": "Cobrança Inteligente",
+  "description": "PWA moderno para gestão de crediário, clientes, cobranças e recebimentos diários em tempo real.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

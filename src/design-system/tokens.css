@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Light: canvas cinza · cards branco puro */
+  --bg-base: #f5f5f5;
+  --bg-surface: #ffffff;
+  --bg-muted: #f5f5f5;
+  --bg-inset: #efefef;
+  --bg-elevated: #ffffff;
+  --bg-sidebar: #141414;
+  --bg-sidebar-hover: #1f1f1f;
+
+  --text-primary: #141414;
+  --text-secondary: #525252;
+  --text-muted: #737373;
+  --text-on-sidebar: #f5f5f5;
+  --text-on-sidebar-muted: #a3a3a3;
+
+  --accent: #141414;
+  --accent-hover: #262626;
+  --accent-subtle: #ebebeb;
+  --accent-fg: #ffffff;
+
+  /* Bordas leves — hierarquia vem do fundo + sombra */
+  --border: rgba(0, 0, 0, 0.07);
+  --border-strong: rgba(0, 0, 0, 0.12);
+  --surface-border: rgba(0, 0, 0, 0.05);
+
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-subtle: #fef2f2;
+  --success: oklch(0.52 0.14 155);
+  --success-subtle: #f0fdf4;
+  --warning: oklch(0.68 0.14 75);
+  --warning-subtle: #fffbeb;
+
+  --radius-panel: 12px;
+  --radius-control: 8px;
+  --radius-pill: 999px;
+
+  --glass-blur: 0px;
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.03);
+  --shadow-elevated: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --z-dropdown: 30;
+  --z-sticky: 40;
+  --z-overlay: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+
+  --space-touch: 44px;
+  --sidebar-width: 240px;
+  --mobile-nav-height: 56px;
+}
+
+.dark {
+  /* Dark: canvas preto · cards cinza glass premium */
+  --bg-base: #000000;
+  --bg-surface: rgba(255, 255, 255, 0.05);
+  --bg-muted: #1a1a1a;
+  --bg-inset: #111111;
+  --bg-elevated: rgba(255, 255, 255, 0.07);
+  --bg-sidebar: #0a0a0a;
+  --bg-sidebar-hover: #171717;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --text-on-sidebar: #f5f5f5;
+  --text-on-sidebar-muted: #737373;
+
+  --accent: #f5f5f5;
+  --accent-hover: #e5e5e5;
+  --accent-subtle: rgba(255, 255, 255, 0.1);
+  --accent-fg: #0a0a0a;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --surface-border: transparent;
+
+  --destructive-subtle: rgba(239, 68, 68, 0.12);
+  --success-subtle: rgba(34, 197, 94, 0.12);
+  --warning-subtle: rgba(245, 158, 11, 0.12);
+
+  --glass-blur: 16px;
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 12px 40px rgba(0, 0, 0, 0.55);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

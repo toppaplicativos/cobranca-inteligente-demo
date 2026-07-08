@@ -1,0 +1,21 @@
+---
+pid: 2240
+cwd: "C:\Users\Public\Projetos\cobrança-inteligente"
+command: "Set-Location \"C:\\Users\\Public\\Projetos\\cobrança-inteligente\"; npm install"
+started_at: 2026-07-05T12:37:29.306Z
+running_for_ms: 86400024 
+---
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+added 214 packages, and audited 215 packages in 40s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+---
+exit_code: -1
+elapsed_ms: 86400024
+ended_at: 2026-07-06T12:37:43.291Z
+---

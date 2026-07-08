@@ -1,0 +1,87 @@
+@import "./design-system/tokens.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+#root {
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+::selection {
+  background: var(--accent-subtle);
+  color: var(--text-primary);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+dialog::backdrop {
+  background: oklch(0 0 0 / 0.55);
+}
+
+/* Superfícies — hierarquia por tom + sombra (light) / glass (dark) */
+.surface-card {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-panel);
+}
+
+.dark .surface-card {
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.surface-elevated {
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-elevated);
+}
+
+.dark .surface-elevated {
+  backdrop-filter: blur(calc(var(--glass-blur) + 4px));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) + 4px));
+}
+
+.surface-muted {
+  background: var(--bg-muted);
+}
+
+.surface-inset {
+  background: var(--bg-inset);
+  box-shadow: var(--shadow-inset);
+}
+
+.dark .surface-inset {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.surface-glass {
+  background: var(--bg-surface);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: var(--shadow-panel);
+}
