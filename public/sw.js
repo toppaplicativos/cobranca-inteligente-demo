@@ -1,11 +1,8 @@
 // Service Worker for Cobrança Inteligente
 const CACHE_NAME = 'cobranca-inteligente-v1';
 const ASSETS_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/src/main.tsx',
-  '/src/App.tsx',
-  '/src/index.css'
+  './',
+  './index.html',
 ];
 
 const DB_NAME = 'CobrancaOfflineDB';

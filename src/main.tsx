@@ -8,10 +8,12 @@ const isLocalDev =
   window.location.hostname === '127.0.0.1' ||
   window.location.hostname.endsWith('.local');
 
+const swUrl = `${import.meta.env.BASE_URL}sw.js`;
+
 // Service Worker apenas fora do dev local — em dev conflita com HMR do Vite
 if ('serviceWorker' in navigator && !isLocalDev) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(swUrl)
       .then((reg) => {
         console.log('Service Worker registered successfully:', reg.scope);
       })
