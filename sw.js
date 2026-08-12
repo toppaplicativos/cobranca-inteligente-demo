@@ -1,5 +1,5 @@
 // Service Worker for Cobrança Inteligente
-const CACHE_NAME = 'cobranca-inteligente-v1';
+const CACHE_NAME = 'cobranca-inteligente-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -25,7 +25,13 @@ self.addEventListener('install', (event) => {
 
 // Activate Event
 self.addEventListener('activate', (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then((cacheNames) => Promise.all(
+      cacheNames
+        .filter((cacheName) => cacheName.startsWith('cobranca-inteligente-') && cacheName !== CACHE_NAME)
+        .map((cacheName) => caches.delete(cacheName)),
+    )).then(() => self.clients.claim()),
+  );
 });
 
 // Fetch Event (Network first, fallback to cache)
